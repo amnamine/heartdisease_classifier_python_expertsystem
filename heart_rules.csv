@@ -1,0 +1,14 @@
+RuleID,Cond1,Op1,Val1,Cond2,Op2,Val2,Result_Attr,Result_Val
+R1,chol,>,240,None,None,None,chol_status,High
+R2,chol,<=,240,None,None,None,chol_status,Normal
+R3,trestbps,>,140,None,None,None,bp_status,High
+R4,trestbps,<=,140,None,None,None,bp_status,Normal
+R5,age,>,55,None,None,None,age_group,Senior
+R6,age,<=,55,None,None,None,age_group,Adult
+R7,chol_status,==,High,bp_status,==,High,risk_factor,High
+R8,age_group,==,Senior,bp_status,==,High,risk_factor,High
+R9,exang,==,1,oldpeak,>,1.5,cardiac_stress,Severe
+R10,risk_factor,==,High,cp,>,0,target,1
+R11,cardiac_stress,==,Severe,None,None,None,target,1
+R12,ca,>,0,None,None,None,target,1
+R13,bp_status,==,Normal,chol_status,==,Normal,target,0
